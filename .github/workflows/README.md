@@ -1,7 +1,7 @@
 # Semantic Versioning Prefix Table
 Here’s a list of allowed prefixes and their respective semantic version (SemVer) increment type:
 
-| Prefix | SemVer Increment | Description| 
+| Prefix | SemVer Increment | Description|  
 |--------|------------------|------------|
 | feat | Minor | A new feature |
 | fix | Patch | A bug fix |
