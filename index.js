@@ -57,6 +57,7 @@ if(version.indexOf('-')>0) {
             let data = await readFile(filename, 'utf8');
 
             let matches = data.match(rex);
+            console.log("MATCHING: ", matches);
             if(!matches) continue;
             for(let j=0;j<matches.length;j++) {
                 let replace = matches[j].replace(/=v?[0.9]*.[0.9]*.[0.9]*/g,(m)=>{
