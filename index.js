@@ -63,7 +63,7 @@ if(version.indexOf('-')>0) {
                     if(m.indexOf('.')>=0) return "="+(m.indexOf('v')>0?'v':'')+version;
                     return m;
                 });
-                replace = replace + encodeURI('"');
+                replace = replace + '"';
                 data = data.replace(matches[j], replace);
             }
 
