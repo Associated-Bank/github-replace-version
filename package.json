@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cdotyone/github-set-readme-version.git"
+    "url": "git+https://github.com/Associated-Bank/github-replace-version.git"
   },
   "keywords": [
     "GitHub",
@@ -21,13 +21,13 @@
   "author": "Chris Doty",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cdotyone/github-set-readme-version/issues"
+    "url": "https://github.com/Associated-Bank/github-replace-version/issues"
   },
-  "homepage": "https://github.com/cdotyone/github-set-readme-version#readme",
+  "homepage": "https://github.com/Associated-Bank/github-replace-version#readme",
   "devDependencies": {
     "@actions/core": ">=1.2.6",
     "@actions/github": "^5.0.0",
-    "@zeit/ncc": "^0.20.5",
+    "@vercel/ncc": "^0.33.1",
     "async": "^3.2.0",
     "eslint": "^6.3.0",
     "globby": "^11.0.4",

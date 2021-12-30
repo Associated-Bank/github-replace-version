@@ -14,8 +14,8 @@ const debug = (''+core.getInput('debug'))==="true";
 
 let version = core.getInput('version') || process.env.version;
 if(!version) version = "0";
-version=version.replace(/v/g, encodeURI('"'));
-let rex = core.getInput('template') || '{repo}\\?ref=(v?[0.9]*\.[0.9]*\.[0.9]*)';
+version=version.replace(/v/g,'');
+let rex = core.getInput('template') || '{repo}\\?ref=(v?[0-9]*\.[0-9]*\.[0-9]*)';
 rex = rex.replace(/\{repo\}/g, github.context.repo.repo);
 if(debug) console.log('replaceVersion: matching -',rex);
 rex = stringToRegExp('/'+rex+'/g');
@@ -59,7 +59,7 @@ if(version.indexOf('-')>0) {
             let matches = data.match(rex);
             if(!matches) continue;
             for(let j=0;j<matches.length;j++) {
-                let replace = matches[j].replace(/=v?[0.9]*.[0.9]*.[0.9]*/g,(m)=>{
+                let replace = matches[j].replace(/=v?[0-9]*.[0-9]*.[0-9]*/g,(m)=>{
                     if(m.indexOf('.')>=0) return "="+(m.indexOf('v')>0?'v':'')+version;
                     return m;
                 });
